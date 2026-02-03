@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>ShannonAI Jobs Active Dashboard Refined</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#0D6E6E",
+            "background-light": "#F9FAFB",
+            "background-dark": "#111827",
+          },
+          fontFamily: {
+            sans: ["Roboto", "sans-serif"],
+            display: ["Roboto", "sans-serif"],
+          },
+          borderRadius: {
+            DEFAULT: "8px",
+          },
+        },
+      },
+    };
+  </script>
+  <style type="text/tailwindcss">
+    @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(4px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-page-in {
+            animation: fadeIn 0.4s ease-out forwards;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            opacity: 0;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            font-size: 20px;
+        }
+        .sidebar-icon-active {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+
+<body
+  class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 transition-colors duration-200 animate-page-in">
+  <div class="flex min-h-screen">
+    <aside
+      class="w-64 border-r border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 hidden lg:flex flex-col">
+      <div class="p-6">
+        <a class="flex items-center text-primary font-bold text-2xl tracking-tight" href="jobs-page.html">
+          ShannonAI
+        </a>
+      </div>
+      <nav class="flex-1 px-4 space-y-1">
+        <a class="flex items-center gap-3 px-4 py-3 text-primary bg-primary/5 rounded-lg font-medium"
+          href="jobs-page.html">
+          <span class="material-symbols-outlined sidebar-icon-active">work</span>
+          Jobs
+        </a>
+        <a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg transition-colors font-medium"
+          href="candidate-page.html">
+          <span class="material-symbols-outlined">group</span>
+          Candidates
+        </a>
+        <a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg transition-colors font-medium"
+          href="process-page.html">
+          <span class="material-symbols-outlined">account_tree</span>
+          Process
+        </a>
+      </nav>
+      <div class="p-4 border-t border-slate-200 dark:border-slate-800">
+        <button
+          class="w-full flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg transition-colors font-medium"
+          onclick="document.documentElement.classList.toggle('dark')">
+          <span class="material-symbols-outlined">settings</span>
+          Settings
+        </button>
+      </div>
+    </aside>
+    <main class="flex-1 overflow-y-auto">
+      <header
+        class="h-16 border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 flex items-center justify-between px-8 sticky top-0 z-10">
+        <h1 class="text-2xl font-semibold">Jobs</h1>
+        <div class="flex items-center gap-6">
+          <button class="p-2 text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-colors">
+            <span class="material-symbols-outlined">notifications</span>
+          </button>
+          <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white text-sm font-bold">
+            JD
+          </div>
+          <div class="h-6 w-px bg-slate-200 dark:bg-slate-800"></div>
+          <button
+            class="p-2 text-slate-400 hover:text-red-600 dark:hover:text-red-400 transition-colors flex items-center gap-2 text-sm font-medium"
+            onclick="window.location.href='index.html'">
+            <span class="material-symbols-outlined text-xl">logout</span>
+            Sign out
+          </button>
+        </div>
+      </header>
+      <div class="p-8 max-w-7xl mx-auto space-y-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+          <div
+            class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+            <div class="text-slate-500 dark:text-slate-400 text-xs font-bold uppercase tracking-wider mb-2">Incoming CVs
+              (7 days)</div>
+            <div class="text-3xl font-bold mb-2">142</div>
+            <div class="flex items-center text-emerald-500 text-sm font-medium">
+              <span class="material-symbols-outlined !text-sm mr-1">trending_up</span>
+              +12%
+            </div>
+          </div>
+          <div
+            class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+            <div class="text-slate-500 dark:text-slate-400 text-xs font-bold uppercase tracking-wider mb-2">In Progress
+            </div>
+            <div class="text-3xl font-bold mb-2">89</div>
+            <div class="flex items-center text-amber-500 text-sm font-medium">
+              <span class="w-2 h-2 rounded-full bg-amber-500 mr-2"></span>
+              62%
+            </div>
+          </div>
+          <div
+            class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+            <div class="text-slate-500 dark:text-slate-400 text-xs font-bold uppercase tracking-wider mb-2">Shortlist
+            </div>
+            <div class="text-3xl font-bold mb-2">34</div>
+            <div class="flex items-center text-orange-400 text-sm font-medium">
+              <span class="material-symbols-outlined !text-sm mr-1"
+                style="font-variation-settings: 'FILL' 1">star</span>
+              24%
+            </div>
+          </div>
+          <div
+            class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm border-l-4 border-l-rose-500">
+            <div class="text-slate-500 dark:text-slate-400 text-xs font-bold uppercase tracking-wider mb-2">Needs Review
+            </div>
+            <div class="text-3xl font-bold mb-2 text-rose-500">12</div>
+            <div class="flex items-center text-rose-500 text-sm font-medium">
+              <span class="material-symbols-outlined !text-sm mr-1">error</span>
+              Urgent
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <div class="relative flex-1">
+            <span
+              class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+            <input
+              class="w-full pl-10 pr-4 py-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none"
+              placeholder="Search job title or department..." type="text" />
+          </div>
+          <button
+            class="flex items-center justify-center gap-2 px-4 py-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors font-medium text-slate-700 dark:text-slate-300">
+            <span class="material-symbols-outlined">filter_list</span>
+            Status: All
+            <span class="material-symbols-outlined">expand_more</span>
+          </button>
+        </div>
+        <div class="space-y-6">
+          <div
+            class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden group">
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-6">
+                <div>
+                  <h3 class="text-xl font-bold mb-1">Senior Backend Engineer</h3>
+                  <div class="flex gap-4 text-slate-500 dark:text-slate-400 text-sm">
+                    <span class="flex items-center gap-1">
+                      <span class="material-symbols-outlined !text-base">location_on</span> Jakarta
+                    </span>
+                    <span class="flex items-center gap-1">
+                      <span class="material-symbols-outlined !text-base">business_center</span> Engineering
+                    </span>
+                  </div>
+                </div>
+                <span
+                  class="bg-emerald-50 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 px-3 py-1 rounded-full text-sm font-medium flex items-center gap-1">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Open
+                </span>
+              </div>
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 mb-8">
+                <div>
+                  <div class="text-slate-400 text-xs font-medium uppercase tracking-wider mb-1">Total Applicants</div>
+                  <div class="text-2xl font-semibold">87</div>
+                </div>
+                <div>
+                  <div class="text-slate-400 text-xs font-medium uppercase tracking-wider mb-1">Processed</div>
+                  <div class="text-2xl font-semibold">68%</div>
+                </div>
+                <div>
+                  <div class="text-slate-400 text-xs font-medium uppercase tracking-wider mb-1">Failed Must-Have</div>
+                  <div class="text-2xl font-semibold text-rose-500">24%</div>
+                </div>
+                <div>
+                  <div class="text-slate-400 text-xs font-medium uppercase tracking-wider mb-1">Shortlist</div>
+                  <div class="text-2xl font-semibold">18</div>
+                </div>
+              </div>
+              <div
+                class="flex flex-col sm:flex-row justify-between items-center gap-4 pt-6 border-t border-slate-100 dark:border-slate-800">
+                <span class="text-slate-400 text-xs flex items-center gap-1">
+                  <span class="material-symbols-outlined !text-sm">schedule</span>
+                  Updated 2 hours ago
+                </span>
+                <div class="flex gap-2 w-full sm:w-auto">
+                  <a class="flex-1 sm:flex-none flex items-center justify-center gap-2 px-6 py-2 bg-primary text-white rounded-lg hover:opacity-90 transition-opacity font-medium text-center"
+                    href="candidate-page.html">
+                    Open Candidates
+                  </a>
+                  <button
+                    class="flex items-center justify-center p-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors text-slate-600 dark:text-slate-300">
+                    <span class="material-symbols-outlined">settings</span>
+                  </button>
+                  <button
+                    class="flex items-center justify-center p-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors text-slate-600 dark:text-slate-300">
+                    <span class="material-symbols-outlined">file_download</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden group">
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-6">
+                <div>
+                  <h3 class="text-xl font-bold mb-1 text-slate-700 dark:text-slate-300">Product Manager</h3>
+                  <div class="flex gap-4 text-slate-500 dark:text-slate-400 text-sm">
+                    <span class="flex items-center gap-1">
+                      <span class="material-symbols-outlined !text-base">location_on</span> Bandung
+                    </span>
+                    <span class="flex items-center gap-1">
+                      <span class="material-symbols-outlined !text-base">business_center</span> Product
+                    </span>
+                  </div>
+                </div>
+                <span
+                  class="bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 px-3 py-1 rounded-full text-sm font-medium flex items-center gap-1">
+                  <span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span> Closed
+                </span>
+              </div>
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 mb-8">
+                <div>
+                  <div class="text-slate-400 text-xs font-medium uppercase tracking-wider mb-1">Total Applicants</div>
+                  <div class="text-2xl font-semibold text-slate-400">124</div>
+                </div>
+                <div>
+                  <div class="text-slate-400 text-xs font-medium uppercase tracking-wider mb-1">Processed</div>
+                  <div class="text-2xl font-semibold text-slate-400">45%</div>
+                </div>
+                <div>
+                  <div class="text-slate-400 text-xs font-medium uppercase tracking-wider mb-1">Failed Must-Have</div>
+                  <div class="text-2xl font-semibold text-rose-500/50">32%</div>
+                </div>
+                <div>
+                  <div class="text-slate-400 text-xs font-medium uppercase tracking-wider mb-1">Shortlist</div>
+                  <div class="text-2xl font-semibold text-slate-400">27</div>
+                </div>
+              </div>
+              <div
+                class="flex flex-col sm:flex-row justify-between items-center gap-4 pt-6 border-t border-slate-100 dark:border-slate-800">
+                <span class="text-slate-400 text-xs flex items-center gap-1">
+                  <span class="material-symbols-outlined !text-sm">schedule</span>
+                  Updated 5 hours ago
+                </span>
+                <div class="flex gap-2 w-full sm:w-auto">
+                  <a class="flex-1 sm:flex-none flex items-center justify-center gap-2 px-6 py-2 bg-primary text-white rounded-lg hover:opacity-90 transition-opacity font-medium text-center"
+                    href="candidate-page.html">
+                    Open Candidates
+                  </a>
+                  <button
+                    class="flex items-center justify-center p-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors text-slate-600 dark:text-slate-300">
+                    <span class="material-symbols-outlined">settings</span>
+                  </button>
+                  <button
+                    class="flex items-center justify-center p-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors text-slate-600 dark:text-slate-300">
+                    <span class="material-symbols-outlined">file_download</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+</body>
+
+</html>

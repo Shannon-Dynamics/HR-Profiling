@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>ShannonAI Jobs Active Dashboard</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#0D6E6E",
+                        "background-light": "#F9FAFB",
+                        "background-dark": "#111827",
+                    },
+                    fontFamily: {
+                        sans: ["Roboto", "sans-serif"],
+                        display: ["Roboto", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "8px",
+                    },
+                },
+            },
+        };
+    </script>
+    <style type="text/tailwindcss">
+        @layer base {
+            body {
+                font-family: 'Roboto', sans-serif;
+                opacity: 0;
+            }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(4px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-page-in {
+            animation: fadeIn 0.4s ease-out forwards;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            font-size: 20px;
+        }
+        .sidebar-icon-active {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 transition-colors duration-200 animate-page-in">
+    <div class="flex min-h-screen">
+        <aside
+            class="w-64 border-r border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 hidden lg:flex flex-col">
+            <div class="p-6">
+                <a class="flex items-center text-primary font-bold text-2xl tracking-tight" href="jobs-page.html">
+                    ShannonAI
+                </a>
+            </div>
+            <nav class="flex-1 px-4 space-y-1">
+                <a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg transition-colors font-medium"
+                    href="jobs-page.html">
+                    <span class="material-symbols-outlined">work</span>
+                    Jobs
+                </a>
+                <a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg transition-colors font-medium"
+                    href="candidate-page.html">
+                    <span class="material-symbols-outlined">group</span>
+                    Candidates
+                </a>
+                <a class="flex items-center gap-3 px-4 py-3 text-primary bg-primary/10 rounded-lg font-medium"
+                    href="process-page.html">
+                    <span class="material-symbols-outlined sidebar-icon-active">account_tree</span>
+                    Process
+                </a>
+            </nav>
+            <div class="p-4 border-t border-slate-200 dark:border-slate-800">
+                <button
+                    class="w-full flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg transition-colors font-medium"
+                    onclick="document.documentElement.classList.toggle('dark')">
+                    <span class="material-symbols-outlined">settings</span>
+                    Settings
+                </button>
+            </div>
+        </aside>
+        <main class="flex-1 overflow-y-auto">
+            <header
+                class="h-16 border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 flex items-center justify-between px-8 sticky top-0 z-10">
+                <h1 class="text-2xl font-semibold">Process</h1>
+                <div class="flex items-center gap-6">
+                    <button
+                        class="p-2 text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-colors relative">
+                        <span class="material-symbols-outlined">notifications</span>
+                    </button>
+                    <div
+                        class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white text-sm font-bold">
+                        JD
+                    </div>
+                    <div class="h-6 w-px bg-slate-200 dark:bg-slate-800"></div>
+                    <button
+                        class="p-2 text-slate-400 hover:text-red-600 dark:hover:text-red-400 transition-colors flex items-center gap-2 text-sm font-medium"
+                        onclick="window.location.href='index.html'">
+                        <span class="material-symbols-outlined text-xl">logout</span>
+                        Sign out
+                    </button>
+                </div>
+            </header>
+            <div class="p-8 max-w-7xl mx-auto space-y-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-5 gap-4">
+                    <div
+                        class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+                        <div
+                            class="text-slate-500 dark:text-slate-400 text-xs font-medium mb-3 uppercase tracking-wider">
+                            Total Pending</div>
+                        <div class="text-3xl font-bold mb-3 text-orange-500">24</div>
+                        <div class="flex items-center text-slate-400 text-xs font-medium">
+                            <span class="material-symbols-outlined text-xs mr-1">schedule</span>
+                            In queue
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+                        <div
+                            class="text-slate-500 dark:text-slate-400 text-xs font-medium mb-3 uppercase tracking-wider">
+                            In Progress</div>
+                        <div class="text-3xl font-bold mb-3 text-blue-500">8</div>
+                        <div class="flex items-center text-slate-400 text-xs font-medium">
+                            <span class="material-symbols-outlined text-xs mr-1 text-blue-500">motion_photos_on</span>
+                            Processing
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+                        <div
+                            class="text-slate-500 dark:text-slate-400 text-xs font-medium mb-3 uppercase tracking-wider">
+                            Completed Today</div>
+                        <div class="text-3xl font-bold mb-3 text-primary">142</div>
+                        <div class="flex items-center text-slate-400 text-xs font-medium">
+                            <span class="material-symbols-outlined text-xs mr-1 text-primary">check_circle</span>
+                            Successful
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+                        <div
+                            class="text-slate-500 dark:text-slate-400 text-xs font-medium mb-3 uppercase tracking-wider">
+                            Failed Today</div>
+                        <div class="text-3xl font-bold mb-3 text-red-500">7</div>
+                        <div class="flex items-center text-slate-400 text-xs font-medium">
+                            <span class="material-symbols-outlined text-xs mr-1 text-red-500">error</span>
+                            Needs review
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+                        <div
+                            class="text-slate-500 dark:text-slate-400 text-xs font-medium mb-3 uppercase tracking-wider">
+                            Avg. Processing Time</div>
+                        <div class="text-3xl font-bold mb-3">2.3m</div>
+                        <div class="flex items-center text-slate-400 text-xs font-medium">
+                            <span class="material-symbols-outlined text-xs mr-1">bolt</span>
+                            Per CV
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col sm:flex-row items-end sm:items-center justify-between">
+                    <div class="flex items-center gap-8 h-full">
+                        <button class="pb-4 text-sm font-semibold text-primary border-b-2 border-primary">Batch
+                            Processing</button>
+                        <button
+                            class="pb-4 text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 transition-colors">Needs
+                            Review (7)</button>
+                    </div>
+                    <div class="flex items-center gap-3 pb-3">
+                        <button
+                            class="flex items-center gap-2 px-3 py-1.5 border border-slate-200 dark:border-slate-700 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors text-sm font-medium">
+                            <span class="material-symbols-outlined text-sm">refresh</span>
+                            Refresh
+                        </button>
+                        <button
+                            class="flex items-center gap-2 px-4 py-1.5 bg-primary text-white rounded-lg hover:bg-[#0a5a5a] transition-colors text-sm font-medium shadow-sm">
+                            <span class="material-symbols-outlined text-lg">add</span>
+                            Upload CV
+                        </button>
+                    </div>
+                </div>
+                <div
+                    class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm">
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr
+                                    class="bg-slate-50 dark:bg-slate-800/50 border-b border-slate-200 dark:border-slate-800">
+                                    <th
+                                        class="px-6 py-4 text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
+                                        Job</th>
+                                    <th
+                                        class="px-6 py-4 text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
+                                        Batch ID</th>
+                                    <th
+                                        class="px-6 py-4 text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
+                                        Submitted By</th>
+                                    <th
+                                        class="px-6 py-4 text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider text-center">
+                                        Files</th>
+                                    <th
+                                        class="px-6 py-4 text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
+                                        Progress</th>
+                                    <th
+                                        class="px-6 py-4 text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
+                                        ETA</th>
+                                    <th
+                                        class="px-6 py-4 text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider text-center">
+                                        Status</th>
+                                    <th
+                                        class="px-6 py-4 text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider text-right">
+                                        Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-100 dark:divide-slate-800">
+                                <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+                                    <td class="px-6 py-4 font-medium text-slate-900 dark:text-white">Sales Executive -
+                                        Jakarta</td>
+                                    <td class="px-6 py-4 text-sm text-slate-600 dark:text-slate-400 font-mono">
+                                        BTH-2024-0342</td>
+                                    <td class="px-6 py-4 text-sm text-slate-600 dark:text-slate-400">Ahmad Rizki</td>
+                                    <td class="px-6 py-4 text-sm text-center font-medium">12</td>
+                                    <td class="px-6 py-4 min-w-[200px]">
+                                        <div class="flex flex-col gap-1.5">
+                                            <div class="w-full bg-slate-100 dark:bg-slate-800 rounded-full h-1.5">
+                                                <div class="bg-primary h-1.5 rounded-full" style="width: 75%"></div>
+                                            </div>
+                                            <span class="text-[10px] text-primary font-medium">75% (9/12)</span>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 text-sm text-slate-600 dark:text-slate-400">~3 min</td>
+                                    <td class="px-6 py-4 text-center">
+                                        <span
+                                            class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-50 text-blue-700 border border-blue-100">
+                                            Processing
+                                        </span>
+                                    </td>
+                                    <td class="px-6 py-4 text-right">
+                                        <button
+                                            class="p-2 text-primary hover:bg-primary/5 rounded-full transition-colors"
+                                            title="View Details">
+                                            <span class="material-symbols-outlined">visibility</span>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+                                    <td class="px-6 py-4 font-medium text-slate-900 dark:text-white">Product Manager
+                                    </td>
+                                    <td class="px-6 py-4 text-sm text-slate-600 dark:text-slate-400 font-mono">
+                                        BTH-2024-0341</td>
+                                    <td class="px-6 py-4 text-sm text-slate-600 dark:text-slate-400">Siti Nurhaliza</td>
+                                    <td class="px-6 py-4 text-sm text-center font-medium">8</td>
+                                    <td class="px-6 py-4 min-w-[200px]">
+                                        <div class="flex flex-col gap-1.5">
+                                            <div class="w-full bg-slate-100 dark:bg-slate-800 rounded-full h-1.5">
+                                                <div class="bg-primary h-1.5 rounded-full" style="width: 100%"></div>
+                                            </div>
+                                            <span class="text-[10px] text-primary font-medium">100% (8/8)</span>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 text-sm text-slate-500 dark:text-slate-500">Completed</td>
+                                    <td class="px-6 py-4 text-center">
+                                        <span
+                                            class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-50 text-emerald-700 border border-emerald-100">
+                                            Success
+                                        </span>
+                                    </td>
+                                    <td class="px-6 py-4 text-right">
+                                        <button
+                                            class="p-2 text-primary hover:bg-primary/5 rounded-full transition-colors"
+                                            title="View Details">
+                                            <span class="material-symbols-outlined">visibility</span>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+                                    <td class="px-6 py-4 font-medium text-slate-900 dark:text-white">Backend Engineer
+                                    </td>
+                                    <td class="px-6 py-4 text-sm text-slate-600 dark:text-slate-400 font-mono">
+                                        BTH-2024-0340</td>
+                                    <td class="px-6 py-4 text-sm text-slate-600 dark:text-slate-400">Ahmad Rizki</td>
+                                    <td class="px-6 py-4 text-sm text-center font-medium">15</td>
+                                    <td class="px-6 py-4 min-w-[200px]">
+                                        <div class="flex flex-col gap-1.5">
+                                            <div class="w-full bg-slate-100 dark:bg-slate-800 rounded-full h-1.5">
+                                                <div class="bg-red-500 h-1.5 rounded-full" style="width: 67%"></div>
+                                            </div>
+                                            <span class="text-[10px] text-red-500 font-medium">67% (10/15)</span>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 text-sm text-red-500">Failed</td>
+                                    <td class="px-6 py-4 text-center">
+                                        <span
+                                            class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-50 text-red-700 border border-red-100">
+                                            Error
+                                        </span>
+                                    </td>
+                                    <td class="px-6 py-4 text-right">
+                                        <div class="flex items-center justify-end gap-2">
+                                            <button
+                                                class="p-2 text-primary hover:bg-primary/5 rounded-full transition-colors"
+                                                title="View Details">
+                                                <span class="material-symbols-outlined">visibility</span>
+                                            </button>
+                                            <button
+                                                class="p-2 text-red-500 hover:bg-red-50 rounded-full transition-colors"
+                                                title="Retry Failed">
+                                                <span class="material-symbols-outlined">replay</span>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+
+</html>

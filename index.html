@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>ShannonAI | Login</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#0D6E6E",
+                        "primary-hover": "#0a5a5a",
+                        "background-light": "#F8FAFC",
+                        "background-dark": "#0F172A",
+                    },
+                    fontFamily: {
+                        sans: ["Inter", "sans-serif"],
+                        display: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "12px",
+                    },
+                },
+            },
+        };
+    </script>
+    <style type="text/tailwindcss">
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-page-in {
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            opacity: 0;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .logo-icon {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-[#F8FAFC] dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col items-center justify-center p-6 animate-page-in">
+    <div class="mb-10 flex flex-col items-center gap-3">
+        <span class="font-bold text-3xl tracking-tight text-primary">ShannonAI</span>
+    </div>
+    <div
+        class="w-full max-w-[460px] bg-white dark:bg-slate-900 rounded-[24px] shadow-2xl shadow-slate-200/60 dark:shadow-none border border-slate-100 dark:border-slate-800 p-12">
+        <div class="mb-10">
+            <h1 class="text-3xl font-bold text-slate-900 dark:text-white mb-2">Welcome back</h1>
+            <p class="text-slate-500 dark:text-slate-400">Please enter your details to sign in.</p>
+        </div>
+        <form action="jobs-page.html" class="space-y-6">
+            <div class="space-y-2">
+                <label class="text-sm font-semibold text-slate-700 dark:text-slate-300 ml-1" for="email">Work
+                    Email</label>
+                <div class="relative">
+                    <span
+                        class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-xl">mail</span>
+                    <input
+                        class="w-full pl-12 pr-4 py-3.5 bg-slate-50 dark:bg-slate-800 border-transparent rounded-xl text-slate-900 dark:text-white focus:ring-2 focus:ring-primary/20 focus:bg-white dark:focus:bg-slate-700 transition-all placeholder:text-slate-400 border border-slate-100 dark:border-slate-700"
+                        id="email" name="email" placeholder="name@company.com" required="" type="email" />
+                </div>
+            </div>
+            <div class="space-y-2">
+                <div class="flex justify-between items-center px-1">
+                    <label class="text-sm font-semibold text-slate-700 dark:text-slate-300"
+                        for="password">Password</label>
+                    <a class="text-sm font-semibold text-primary hover:text-primary-hover transition-colors"
+                        href="#">Forgot Password?</a>
+                </div>
+                <div class="relative">
+                    <span
+                        class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-xl">lock</span>
+                    <input
+                        class="w-full pl-12 pr-4 py-3.5 bg-slate-50 dark:bg-slate-800 border-transparent rounded-xl text-slate-900 dark:text-white focus:ring-2 focus:ring-primary/20 focus:bg-white dark:focus:bg-slate-700 transition-all placeholder:text-slate-400 border border-slate-100 dark:border-slate-700"
+                        id="password" name="password" placeholder="••••••••" required="" type="password" />
+                </div>
+            </div>
+            <button
+                class="w-full bg-primary hover:bg-primary-hover text-white font-bold py-4 rounded-xl shadow-lg shadow-primary/20 transition-all active:scale-[0.98] mt-2"
+                type="button" onclick="window.location.href='jobs-page.html'">
+                Login
+            </button>
+        </form>
+        <div class="mt-12 text-center">
+            <p class="text-sm text-slate-500 dark:text-slate-400">
+                Don't have an account?
+                <a class="text-primary font-bold hover:text-primary-hover transition-colors ml-1" href="#">Sign up</a>
+            </p>
+        </div>
+    </div>
+    <div class="mt-12 flex items-center gap-6">
+        <button
+            class="p-2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors flex items-center gap-2 text-sm font-medium"
+            onclick="document.documentElement.classList.toggle('dark')">
+            <span class="material-symbols-outlined text-xl">dark_mode</span>
+            Appearance
+        </button>
+        <div class="w-px h-4 bg-slate-300 dark:bg-slate-700"></div>
+        <a class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 text-sm font-medium transition-colors"
+            href="#">Privacy Policy</a>
+        <a class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 text-sm font-medium transition-colors"
+            href="#">Support</a>
+    </div>
+
+</body>
+
+</html>
