@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>ShannonAI Candidate List View</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#0D6E6E",
+                        "background-light": "#F9FAFB",
+                        "background-dark": "#111827",
+                    },
+                    fontFamily: {
+                        sans: ["Roboto", "sans-serif"],
+                        display: ["Roboto", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "8px",
+                    },
+                },
+            },
+        };
+    </script>
+    <style type="text/tailwindcss">
+        @layer base {
+            body {
+                font-family: 'Roboto', sans-serif;
+            }
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            font-size: 20px;
+        }
+        .filled-icon {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+
+<body class="bg-[#F8F9FA] dark:bg-background-dark text-slate-900 dark:text-slate-100 transition-colors duration-200">
+    <div class="flex min-h-screen">
+        <aside
+            class="w-64 border-r border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 hidden lg:flex flex-col sticky top-0 h-screen">
+            <div class="p-8">
+                <div class="flex items-center gap-2 text-[#0D6E6E] font-bold text-2xl tracking-tight">
+                    ShannonAI
+                </div>
+            </div>
+            <nav class="flex-1 px-4 space-y-1">
+                <a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg transition-colors group"
+                    href="jobs-dashboard.html">
+                    <span class="material-symbols-outlined filled-icon">work</span>
+                    Jobs
+                </a>
+                <a class="flex items-center gap-3 px-4 py-3 text-[#0D6E6E] bg-[#F1F7F7] rounded-lg font-medium"
+                    href="candidate-dashboard.html">
+                    <span class="material-symbols-outlined filled-icon">group</span>
+                    Candidates
+                </a>
+                <a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg transition-colors group"
+                    href="process-dashboard.html">
+                    <span class="material-symbols-outlined filled-icon">account_tree</span>
+                    Process
+                </a>
+            </nav>
+            <div class="p-4 border-t border-slate-200 dark:border-slate-800">
+                <button
+                    class="w-full flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg transition-colors group text-left">
+                    <span class="material-symbols-outlined filled-icon">settings</span>
+                    Settings
+                </button>
+            </div>
+        </aside>
+        <main class="flex-1 min-h-screen">
+            <header
+                class="h-20 border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 flex items-center justify-between px-8 sticky top-0 z-10">
+                <div class="flex items-center">
+                    <a class="flex items-center gap-1.5 text-slate-500 hover:text-primary transition-colors text-sm font-normal mr-6"
+                        href="jobs-dashboard.html">
+                        <span class="material-symbols-outlined text-[18px]">chevron_left</span>
+                        Back to Jobs
+                    </a>
+                    <div class="h-6 w-px bg-slate-200 dark:bg-slate-800 mr-6"></div>
+                    <div class="flex items-center gap-3">
+                        <h1 class="text-xl font-bold text-slate-800">Senior Backend Engineer - Jakarta</h1>
+                        <span
+                            class="px-2 py-0.5 bg-[#E6F4F1] text-[#0D6E6E] text-[10px] font-bold rounded border border-[#D1E9E4] uppercase tracking-widest">Open</span>
+                    </div>
+                </div>
+                <div class="flex items-center gap-6">
+                    <button
+                        class="p-2 text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-colors">
+                        <span class="material-symbols-outlined">notifications</span>
+                    </button>
+                    <div
+                        class="w-10 h-10 rounded-full bg-[#0D6E6E] flex items-center justify-center text-white text-sm font-bold">
+                        JD
+                    </div>
+                    <a href="login-main.html"
+                        class="p-2 text-slate-500 hover:bg-red-50 hover:text-red-600 dark:hover:bg-red-900/20 dark:hover:text-red-400 rounded-full transition-colors relative flex items-center justify-center group"
+                        title="Logout">
+                        <span
+                            class="material-symbols-outlined group-hover:text-red-600 dark:group-hover:text-red-400">logout</span>
+                    </a>
+                </div>
+            </header>
+            <div class="p-8 max-w-[1400px] mx-auto space-y-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
+                    <div
+                        class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+                        <div class="text-slate-400 text-[10px] font-bold mb-3 uppercase tracking-widest">Total
+                            Applicants</div>
+                        <div class="text-4xl font-bold text-slate-800">87</div>
+                    </div>
+                    <div
+                        class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+                        <div class="text-slate-400 text-[10px] font-bold mb-3 uppercase tracking-widest">Passed
+                            Must-Have</div>
+                        <div class="flex items-baseline gap-2">
+                            <span class="text-4xl font-bold text-[#0D6E6E]">59</span>
+                            <span class="text-[#0D6E6E] font-medium text-lg">(68%)</span>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+                        <div class="text-slate-400 text-[10px] font-bold mb-3 uppercase tracking-widest">Failed
+                            Must-Have</div>
+                        <div class="flex items-baseline gap-2">
+                            <span class="text-4xl font-bold text-[#D93F3F]">21</span>
+                            <span class="text-[#D93F3F] font-medium text-lg">(24%)</span>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+                        <div class="text-slate-400 text-[10px] font-bold mb-3 uppercase tracking-widest">Shortlisted
+                        </div>
+                        <div class="text-4xl font-bold text-slate-800">18</div>
+                    </div>
+                </div>
+                <div
+                    class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl shadow-sm overflow-hidden">
+                    <div class="flex flex-col">
+                        <div class="p-6 border-b border-slate-100 flex items-center justify-between gap-4">
+                            <div class="flex items-center gap-4 flex-1">
+                                <div class="relative w-full max-w-lg">
+                                    <span
+                                        class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+                                    <input
+                                        class="w-full pl-10 pr-4 py-2.5 bg-[#F8F9FA] border border-slate-200 rounded-lg focus:ring-1 focus:ring-primary focus:border-primary transition-all outline-none text-sm"
+                                        placeholder="Search candidate name..." type="text" />
+                                </div>
+                                <a href="candidate-detail-sharelink.html"
+                                    class="flex items-center gap-2 px-4 py-2.5 bg-white border border-slate-200 rounded-lg text-sm font-semibold text-slate-700 hover:bg-slate-50 transition-colors whitespace-nowrap">
+                                    <span class="material-symbols-outlined text-lg">share</span>
+                                    <span>Share</span>
+                                </a>
+                            </div>
+                            <button
+                                class="flex items-center gap-2 px-6 py-2.5 bg-[#0D6E6E] text-white rounded-lg hover:opacity-90 transition-all text-sm font-bold">
+                                Bulk Action (0)
+                                <span class="material-symbols-outlined text-lg">expand_more</span>
+                            </button>
+                        </div>
+                        <div class="flex divide-x divide-slate-100">
+                            <aside class="w-56 shrink-0 p-6 flex flex-col gap-1.5">
+                                <h3 class="text-[10px] font-bold text-slate-400 uppercase tracking-[0.2em] mb-4">Quick
+                                    Filters</h3>
+                                <button
+                                    class="flex items-center gap-3 px-4 py-2.5 bg-[#F1F7F7] text-[#0D6E6E] font-bold rounded-lg text-xs text-left">
+                                    <span class="material-symbols-outlined text-[18px] filled-icon">emoji_events</span>
+                                    Top 20
+                                </button>
+                                <button
+                                    class="flex items-center gap-3 px-4 py-2.5 text-slate-600 hover:bg-slate-50 rounded-lg text-xs font-medium text-left transition-colors">
+                                    <span class="material-symbols-outlined text-[18px]">star</span>
+                                    Score 80+
+                                </button>
+                                <button
+                                    class="flex items-center gap-3 px-4 py-2.5 text-slate-600 hover:bg-slate-50 rounded-lg text-xs font-medium text-left transition-colors">
+                                    <span class="material-symbols-outlined text-[18px]">cancel</span>
+                                    Failed must-have
+                                </button>
+                                <button
+                                    class="flex items-center gap-3 px-4 py-2.5 text-slate-600 hover:bg-slate-50 rounded-lg text-xs font-medium text-left transition-colors">
+                                    <span class="material-symbols-outlined text-[18px]">schedule</span>
+                                    Needs Review
+                                </button>
+                                <button
+                                    class="flex items-center gap-3 px-4 py-2.5 text-slate-600 hover:bg-slate-50 rounded-lg text-xs font-medium text-left transition-colors">
+                                    <span class="material-symbols-outlined text-[18px]">turned_in</span>
+                                    Shortlisted
+                                </button>
+                            </aside>
+                            <div class="flex-1 overflow-x-auto">
+                                <table class="w-full text-left border-collapse min-w-[900px]">
+                                    <thead>
+                                        <tr class="border-b border-slate-100">
+                                            <th class="py-5 px-6 w-12 text-center">
+                                                <input
+                                                    class="w-4 h-4 rounded-full border-slate-300 text-[#0D6E6E] focus:ring-[#0D6E6E]"
+                                                    type="checkbox" />
+                                            </th>
+                                            <th
+                                                class="py-5 px-4 text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+                                                Candidate Name</th>
+                                            <th
+                                                class="py-5 px-4 text-[10px] font-bold text-slate-400 uppercase tracking-widest text-center">
+                                                AI Score</th>
+                                            <th
+                                                class="py-5 px-4 text-[10px] font-bold text-slate-400 uppercase tracking-widest text-center">
+                                                Must-Have Status</th>
+                                            <th
+                                                class="py-5 px-4 text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+                                                Summary</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-slate-50">
+                                        <tr class="hover:bg-slate-50/50 transition-colors group">
+                                            <td class="py-6 px-6 text-center">
+                                                <input
+                                                    class="w-4 h-4 rounded-full border-slate-300 text-[#0D6E6E] focus:ring-[#0D6E6E]"
+                                                    type="checkbox" />
+                                            </td>
+                                            <td class="py-6 px-4">
+                                                <div class="flex flex-col">
+                                                    <span class="font-bold text-sm text-slate-800">Ahmad Ridwan</span>
+                                                    <span class="text-xs text-slate-400">ahmad.r@email.com</span>
+                                                </div>
+                                            </td>
+                                            <td class="py-6 px-4">
+                                                <div class="flex items-center justify-center gap-2">
+                                                    <span class="text-[#0D6E6E] font-bold text-sm">92</span>
+                                                    <span class="text-[#B2D6D6] text-xs font-medium">95%</span>
+                                                </div>
+                                            </td>
+                                            <td class="py-6 px-4 text-center">
+                                                <span
+                                                    class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#E6F4F1] text-[#0D6E6E] text-[11px] font-bold border border-[#D1E9E4]">
+                                                    <span
+                                                        class="material-symbols-outlined text-[16px] filled-icon">check_circle</span>
+                                                    Passed All
+                                                </span>
+                                            </td>
+                                            <td class="py-6 px-4">
+                                                <p class="text-xs text-slate-500 max-w-sm line-clamp-2">Experience 5+
+                                                    years in sales B2B, track record consistent reaching targets...</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="hover:bg-slate-50/50 transition-colors">
+                                            <td class="py-6 px-6 text-center">
+                                                <input
+                                                    class="w-4 h-4 rounded-full border-slate-300 text-[#0D6E6E] focus:ring-[#0D6E6E]"
+                                                    type="checkbox" />
+                                            </td>
+                                            <td class="py-6 px-4">
+                                                <div class="flex flex-col">
+                                                    <span class="font-bold text-sm text-slate-800">Siti Nurhaliza</span>
+                                                    <span class="text-xs text-slate-400">siti.n@email.com</span>
+                                                </div>
+                                            </td>
+                                            <td class="py-6 px-4">
+                                                <div class="flex items-center justify-center gap-2">
+                                                    <div
+                                                        class="w-12 h-1 bg-slate-100 rounded-full overflow-hidden relative">
+                                                        <div
+                                                            class="absolute inset-y-0 left-0 bg-amber-400 w-1/2 rounded-full">
+                                                        </div>
+                                                    </div>
+                                                    <span
+                                                        class="material-symbols-outlined text-amber-400 text-[18px]">wb_sunny</span>
+                                                </div>
+                                            </td>
+                                            <td class="py-6 px-4 text-center">
+                                                <span
+                                                    class="inline-flex items-center px-4 py-1.5 rounded-full bg-orange-50 text-orange-600 text-[11px] font-bold border border-orange-100">
+                                                    Analyzing...
+                                                </span>
+                                            </td>
+                                            <td class="py-6 px-4">
+                                                <p class="text-xs text-slate-400 italic">Analyzing CV...</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="hover:bg-slate-50/50 transition-colors">
+                                            <td class="py-6 px-6 text-center">
+                                                <input
+                                                    class="w-4 h-4 rounded-full border-slate-300 text-[#0D6E6E] focus:ring-[#0D6E6E]"
+                                                    type="checkbox" />
+                                            </td>
+                                            <td class="py-6 px-4">
+                                                <div class="flex flex-col">
+                                                    <span class="font-bold text-sm text-slate-800">Anonymous</span>
+                                                    <span class="text-xs text-slate-400">Blind Mode • 2 hrs ago</span>
+                                                </div>
+                                            </td>
+                                            <td class="py-6 px-4 text-center">
+                                                <div class="flex items-center justify-center gap-2">
+                                                    <span class="text-[#D93F3F] font-bold text-sm">67</span>
+                                                    <span class="text-red-200 text-xs font-medium">78%</span>
+                                                </div>
+                                            </td>
+                                            <td class="py-6 px-4 text-center">
+                                                <span
+                                                    class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-red-50 text-red-600 text-[11px] font-bold border border-red-100">
+                                                    <span
+                                                        class="material-symbols-outlined text-[16px] filled-icon">cancel</span>
+                                                    Failed 2/5
+                                                </span>
+                                            </td>
+                                            <td class="py-6 px-4">
+                                                <p class="text-xs text-slate-500 max-w-sm line-clamp-2">Does not meet
+                                                    minimum 3 years sales experience...</p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+
+</html>

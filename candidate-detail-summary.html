@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>ShannonAI - Ahmad Ridwan Profile</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#0D6E6E",
+                        "background-light": "#F9FAFB",
+                        "background-dark": "#111827",
+                    },
+                    fontFamily: {
+                        sans: ["Roboto", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "8px",
+                    },
+                },
+            },
+        };
+    </script>
+    <style type="text/tailwindcss">
+        @layer base {
+            body {
+                font-family: 'Roboto', sans-serif;
+            }
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            font-size: 20px;
+        }
+        .material-symbols-solid {
+            font-family: 'Material Symbols Outlined';
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            font-size: 20px;
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .tab-active {
+            @apply border-b-2 border-primary text-primary font-semibold;
+        }
+        .tab-inactive {
+            @apply text-slate-500 hover:text-slate-700 font-medium;
+        }
+    </style>
+</head>
+
+<body class="bg-[#F8F9FA] dark:bg-background-dark text-slate-900 dark:text-slate-100 transition-colors duration-200">
+    <div class="flex min-h-screen">
+        <aside
+            class="w-64 border-r border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 hidden lg:flex flex-col sticky top-0 h-screen">
+            <div class="p-6">
+                <div class="flex items-center gap-2 text-primary font-bold text-2xl tracking-tight">
+                    ShannonAI
+                </div>
+            </div>
+            <nav class="flex-1 px-4 space-y-1">
+                <a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg transition-colors"
+                    href="jobs-dashboard.html">
+                    <span class="material-symbols-solid">work</span>
+                    Jobs
+                </a>
+                <a class="flex items-center gap-3 px-4 py-3 text-primary bg-primary/10 rounded-lg font-medium"
+                    href="candidate-dashboard.html">
+                    <span class="material-symbols-solid">group</span>
+                    Candidates
+                </a>
+                <a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg transition-colors"
+                    href="process-dashboard.html">
+                    <span class="material-symbols-solid">account_tree</span>
+                    Process
+                </a>
+            </nav>
+            <div class="p-4 border-t border-slate-200 dark:border-slate-800">
+                <a class="w-full flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg transition-colors"
+                    href="#">
+                    <span class="material-symbols-solid">settings</span>
+                    Settings
+                </a>
+
+            </div>
+        </aside>
+        <main class="flex-1 flex flex-col min-h-screen">
+            <header
+                class="h-16 bg-white dark:bg-slate-900 flex items-center justify-between px-8 border-b border-slate-100 sticky top-0 z-10">
+                <div class="flex items-center">
+                    <a class="flex items-center text-slate-500 hover:text-primary transition-colors text-sm font-medium group"
+                        href="#">
+                        <span class="material-symbols-outlined mr-2 !text-[18px]">arrow_back_ios</span>
+                        Back to Candidates
+                    </a>
+                    <div class="h-5 w-[1px] bg-slate-200 dark:bg-slate-700 mx-6"></div>
+                    <div class="flex items-center gap-3">
+                        <h1 class="text-xl font-bold text-slate-800 dark:text-white">Ahmad Ridwan</h1>
+                        <span class="bg-primary text-white px-2 py-0.5 rounded text-sm font-bold">92</span>
+                        <span
+                            class="bg-teal-50 text-primary border border-primary/20 px-3 py-0.5 rounded-full text-xs font-medium">Passed
+                            Must-Have</span>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4">
+                    <button
+                        class="p-2 text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-colors relative flex items-center justify-center">
+                        <span class="material-symbols-outlined">notifications</span>
+                    </button>
+                    <div
+                        class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white text-sm font-medium">
+                        JD
+                    </div>
+                    <a href="login-main.html"
+                        class="p-2 text-slate-500 hover:bg-red-50 hover:text-red-600 dark:hover:bg-red-900/20 dark:hover:text-red-400 rounded-full transition-colors relative flex items-center justify-center group"
+                        title="Logout">
+                        <span
+                            class="material-symbols-outlined group-hover:text-red-600 dark:group-hover:text-red-400">logout</span>
+                    </a>
+                </div>
+            </header>
+            <div class="bg-white px-8 py-3 border-b border-slate-100 flex items-center justify-between">
+                <div class="flex gap-2">
+                    <button
+                        class="flex items-center gap-2 px-3 py-1.5 border border-slate-200 rounded-lg text-sm text-slate-600 hover:bg-slate-50">
+                        <span class="material-symbols-outlined !text-[18px]">description</span>
+                        Open Original CV
+                    </button>
+                    <button
+                        class="flex items-center gap-2 px-3 py-1.5 border border-slate-200 rounded-lg text-sm text-slate-600 hover:bg-slate-50">
+                        <span class="material-symbols-outlined !text-[18px]">download</span>
+                        Export PDF
+                    </button>
+                    <button
+                        class="flex items-center gap-2 px-3 py-1.5 border border-orange-200 bg-orange-50/50 rounded-lg text-sm text-orange-700 hover:bg-orange-50">
+                        <span class="material-symbols-outlined !text-[18px] text-orange-500">auto_awesome</span>
+                        Request Deep Analysis <span class="text-[10px] text-slate-400 ml-1">(credits apply)</span>
+                    </button>
+                </div>
+                <div class="flex items-center gap-4 text-xs text-slate-400">
+                    <span>Processed: 2 hours ago</span>
+                    <span class="flex items-center gap-1"><span
+                            class="material-symbols-outlined !text-[14px]">settings</span> GPT-4o-mini</span>
+                </div>
+            </div>
+            <div class="p-6 flex-1 flex gap-6">
+                <div class="w-[70%] flex flex-col gap-6">
+                    <div
+                        class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden p-12 flex flex-col items-center justify-center text-center">
+                        <div class="mb-6 relative">
+                            <span
+                                class="material-symbols-outlined text-primary text-5xl animate-spin">progress_activity</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Currently Processing</h3>
+                        <p class="text-slate-500 text-sm mb-6 max-w-sm">Candidate is being analyzed. Partial data will
+                            appear once available.</p>
+                        <div class="w-full max-w-md bg-slate-100 h-2 rounded-full overflow-hidden mb-3">
+                            <div class="bg-primary h-full w-[60%]"></div>
+                        </div>
+                        <p class="text-xs text-slate-400 mb-8 font-medium">Extracting text from CV... (60%)</p>
+                        <button
+                            class="flex items-center gap-2 px-6 py-3 border border-orange-200 bg-orange-50 rounded-xl text-sm text-orange-700 font-bold hover:bg-orange-100 transition-colors shadow-sm">
+                            <span class="material-symbols-outlined !text-[20px] text-orange-500">auto_awesome</span>
+                            Deep Analysis for faster results
+                        </button>
+                    </div>
+                    <div class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm">
+                        <div class="flex border-b border-slate-100">
+                            <button
+                                class="px-6 py-3 text-sm font-semibold text-primary border-b-2 border-primary bg-slate-50/50">Evidence</button>
+                            <button class="px-6 py-3 text-sm font-medium text-slate-500 hover:text-slate-700">Original
+                                CV</button>
+                            <button class="px-6 py-3 text-sm font-medium text-slate-500 hover:text-slate-700">OCR
+                                Text</button>
+                        </div>
+                        <div class="p-8">
+                            <div class="bg-[#FDFDFD] rounded-xl p-10 min-h-[500px] border border-slate-100">
+                                <h4 class="text-sm font-bold text-slate-900 mb-8 uppercase tracking-wider">CV - AHMAD
+                                    RIDWAN</h4>
+                                <div class="space-y-6">
+                                    <div
+                                        class="p-4 bg-[#FFFBEB] rounded border border-[#FEF3C7] text-slate-800 text-sm">
+                                        5+ years experience in backend development
+                                    </div>
+                                    <div
+                                        class="p-4 bg-[#FFFBEB] rounded border border-[#FEF3C7] text-slate-800 text-sm">
+                                        Golang, Python, PostgreSQL, Redis
+                                    </div>
+                                    <p class="text-sm text-slate-600 leading-relaxed px-1">
+                                        Bachelor of Computer Science from ITB
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space-y-3">
+                        <h3 class="font-bold text-slate-800 px-1">List of Evidence</h3>
+                        <div
+                            class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between group hover:border-primary/30 transition-colors">
+                            <div class="flex items-center gap-4">
+                                <span class="text-slate-400 text-sm font-medium">1</span>
+                                <span class="text-sm text-slate-700">Experience in backend development for 5+
+                                    years</span>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between group hover:border-primary/30 transition-colors">
+                            <div class="flex items-center gap-4">
+                                <span class="text-slate-400 text-sm font-medium">2</span>
+                                <span class="text-sm text-slate-700">Proficiency in Golang, Python, and PostgreSQL
+                                    stack</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-[30%] flex flex-col gap-4">
+                    <div class="flex items-center gap-2 justify-between mb-2">
+                        <button
+                            class="flex-1 px-4 py-2.5 bg-primary text-white rounded-lg text-sm font-bold hover:opacity-90">Shortlist</button>
+                        <button
+                            class="flex-1 px-4 py-2.5 border border-orange-500 text-orange-500 rounded-lg text-sm font-bold hover:bg-orange-50">Waitlist</button>
+                        <button
+                            class="flex-1 px-4 py-2.5 border border-red-500 text-red-500 rounded-lg text-sm font-bold hover:bg-red-50">Reject</button>
+                    </div>
+                    <div
+                        class="bg-white rounded-xl border border-slate-200 shadow-sm flex flex-col h-fit sticky top-[136px]">
+                        <div class="flex border-b border-slate-100 overflow-x-auto scrollbar-hide">
+                            <button class="px-4 py-4 text-xs tab-active">Summary</button>
+                            <button class="px-4 py-4 text-xs tab-inactive">Profile</button>
+                            <button class="px-4 py-4 text-xs tab-inactive">Must-Have</button>
+                            <button class="px-4 py-4 text-xs tab-inactive">Interview</button>
+                            <button class="px-4 py-4 text-xs tab-inactive">Notes</button>
+                        </div>
+                        <div class="p-6 space-y-6">
+                            <section>
+                                <h4 class="text-xs font-bold text-slate-900 mb-3 uppercase tracking-wider">Candidate
+                                    Summary</h4>
+                                <ul class="space-y-2">
+                                    <li class="flex gap-2 text-xs text-slate-600">
+                                        <span class="w-1 h-1 rounded-full bg-slate-300 mt-1.5 shrink-0"></span>
+                                        5+ years experience as Backend Engineer with focus on Golang and Python
+                                    </li>
+                                    <li class="flex gap-2 text-xs text-slate-600">
+                                        <span class="w-1 h-1 rounded-full bg-slate-300 mt-1.5 shrink-0"></span>
+                                        Proficient in PostgreSQL, Redis, Docker, Kubernetes, AWS
+                                    </li>
+                                    <li class="flex gap-2 text-xs text-slate-600">
+                                        <span class="w-1 h-1 rounded-full bg-slate-300 mt-1.5 shrink-0"></span>
+                                        Education: S1 Computer Science from ITB (GPA 3.7)
+                                    </li>
+                                    <li class="flex gap-2 text-xs text-slate-600">
+                                        <span class="w-1 h-1 rounded-full bg-slate-300 mt-1.5 shrink-0"></span>
+                                        Experience building microservices with high traffic (100K+ req/s)
+                                    </li>
+                                    <li class="flex gap-2 text-xs text-slate-600">
+                                        <span class="w-1 h-1 rounded-full bg-slate-300 mt-1.5 shrink-0"></span>
+                                        Active open-source contributor with 2K+ GitHub stars
+                                    </li>
+                                </ul>
+                            </section>
+                            <section>
+                                <h4 class="text-xs font-bold text-slate-900 mb-3 uppercase tracking-wider">Key Strengths
+                                </h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span
+                                        class="bg-teal-50 text-primary px-2.5 py-1 rounded text-[11px] font-medium border border-primary/20">Backend
+                                        Expert</span>
+                                    <span
+                                        class="bg-teal-50 text-primary px-2.5 py-1 rounded text-[11px] font-medium border border-primary/20">Microservices</span>
+                                    <span
+                                        class="bg-teal-50 text-primary px-2.5 py-1 rounded text-[11px] font-medium border border-primary/20">High
+                                        Performance</span>
+                                </div>
+                            </section>
+                            <section>
+                                <h4 class="text-xs font-bold text-slate-900 mb-3 uppercase tracking-wider">Gaps /
+                                    Missing</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span
+                                        class="bg-orange-50 text-orange-700 px-2.5 py-1 rounded text-[11px] font-medium border border-orange-200">Lack
+                                        of Frontend experience</span>
+                                    <span
+                                        class="bg-orange-50 text-orange-700 px-2.5 py-1 rounded text-[11px] font-medium border border-orange-200">No
+                                        AWS Certification found</span>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="hidden p-6 space-y-6">
+                            <section>
+                                <h4 class="text-xs font-bold text-slate-900 mb-3 uppercase tracking-wider">Contact</h4>
+                                <div
+                                    class="bg-orange-50 border border-orange-100 p-3 rounded-lg flex items-center gap-3">
+                                    <span
+                                        class="material-symbols-outlined text-orange-400 !text-[18px]">visibility_off</span>
+                                    <span class="text-xs text-orange-700 font-medium">Blind Mode active - contact
+                                        hidden</span>
+                                </div>
+                            </section>
+                            <section>
+                                <h4 class="text-xs font-bold text-slate-900 mb-3 uppercase tracking-wider">Education
+                                </h4>
+                                <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                                    <p class="text-sm font-bold text-slate-800">S1 Computer Science</p>
+                                    <p class="text-xs text-slate-500">Institut Teknologi Bandung (ITB)</p>
+                                    <p class="text-[11px] text-slate-400 mt-1">2015 - 2019 • GPA 3.7</p>
+                                </div>
+                            </section>
+                            <section>
+                                <h4 class="text-xs font-bold text-slate-900 mb-3 uppercase tracking-wider">Work
+                                    Experience</h4>
+                                <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                                    <div class="flex gap-3">
+                                        <div
+                                            class="w-10 h-10 bg-primary/10 rounded flex items-center justify-center shrink-0">
+                                            <span class="text-primary font-bold">G</span>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm font-bold text-slate-800">Senior Backend Engineer</p>
+                                            <p class="text-xs text-slate-500">Gojek</p>
+                                            <p class="text-[11px] text-slate-400 mt-1">2021 - Present • 3 years 2 months
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="mt-3 space-y-1.5 pl-1">
+                                        <div class="flex gap-2 text-[11px] text-slate-600">
+                                            <span class="w-1 h-1 rounded-full bg-slate-300 mt-1.5 shrink-0"></span>
+                                            Built microservices for payment gateway (100K+ req/s)
+                                        </div>
+                                        <div class="flex gap-2 text-[11px] text-slate-600">
+                                            <span class="w-1 h-1 rounded-full bg-slate-300 mt-1.5 shrink-0"></span>
+                                            Reduced API latency by 40%
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section>
+                                <h4 class="text-xs font-bold text-slate-900 mb-3 uppercase tracking-wider">Skills</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span
+                                        class="bg-teal-50 text-primary px-2.5 py-1 rounded text-[11px] font-medium border border-primary/10">Golang</span>
+                                    <span
+                                        class="bg-teal-50 text-primary px-2.5 py-1 rounded text-[11px] font-medium border border-primary/10">Python</span>
+                                    <span
+                                        class="bg-teal-50 text-primary px-2.5 py-1 rounded text-[11px] font-medium border border-primary/10">PostgreSQL</span>
+                                    <span
+                                        class="bg-teal-50 text-primary px-2.5 py-1 rounded text-[11px] font-medium border border-primary/10">Docker</span>
+                                    <span
+                                        class="bg-teal-50 text-primary px-2.5 py-1 rounded text-[11px] font-medium border border-primary/10">Kubernetes</span>
+                                    <span
+                                        class="bg-teal-50 text-primary px-2.5 py-1 rounded text-[11px] font-medium border border-primary/10">AWS</span>
+                                </div>
+                            </section>
+                            <section>
+                                <h4 class="text-xs font-bold text-slate-900 mb-3 uppercase tracking-wider">
+                                    Certifications</h4>
+                                <div class="p-3 bg-slate-50 rounded-xl border border-slate-100 flex items-center gap-3">
+                                    <span
+                                        class="material-symbols-outlined text-primary !text-[20px]">workspace_premium</span>
+                                    <div>
+                                        <p class="text-xs font-bold text-slate-800">Google Cloud Professional Architect
+                                        </p>
+                                        <p class="text-[10px] text-slate-400">Issued: Jan 2023</p>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="hidden p-6 space-y-4">
+                            <div class="border border-emerald-200 bg-emerald-50/30 p-4 rounded-xl relative">
+                                <div class="flex justify-between items-start mb-2">
+                                    <div class="flex items-center gap-2">
+                                        <span class="material-symbols-outlined text-emerald-500">check_circle</span>
+                                        <h5 class="text-sm font-bold text-slate-900">3+ years backend experience</h5>
+                                    </div>
+                                    <div class="w-10 h-5 bg-emerald-500 rounded-full flex items-center px-1">
+                                        <div class="bg-white w-3 h-3 rounded-full ml-auto"></div>
+                                    </div>
+                                </div>
+                                <p class="text-xs text-slate-600 leading-relaxed mb-3">Reasoning: Candidate has 5+ years
+                                    experience as Backend Engineer at Gojek and Tokopedia.</p>
+                                <a class="text-[11px] text-primary flex items-center gap-1 font-medium bg-white px-2 py-1 rounded border border-primary/10 w-fit"
+                                    href="#">
+                                    <span class="material-symbols-outlined !text-[12px]">open_in_new</span> View in CV
+                                </a>
+                            </div>
+                            <div class="border border-red-200 bg-red-50/30 p-4 rounded-xl">
+                                <div class="flex justify-between items-start mb-2">
+                                    <div class="flex items-center gap-2">
+                                        <span class="material-symbols-outlined text-red-500">cancel</span>
+                                        <h5 class="text-sm font-bold text-slate-900">AWS Certification</h5>
+                                    </div>
+                                    <div class="w-10 h-5 bg-slate-200 rounded-full flex items-center px-1">
+                                        <div class="bg-white w-3 h-3 rounded-full"></div>
+                                    </div>
+                                </div>
+                                <p class="text-xs text-slate-600 mb-3">Reasoning: No AWS certification found in CV.
+                                    Candidate only has GCP certification.</p>
+                                <div
+                                    class="bg-orange-100 text-orange-700 p-2 rounded text-[11px] flex items-center gap-2">
+                                    <span class="material-symbols-outlined !text-[14px]">warning</span>
+                                    Evidence not found; please verify in CV
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hidden p-6 space-y-4">
+                            <div class="flex justify-between items-center">
+                                <h4 class="text-sm font-bold text-slate-900">Interview Questions</h4>
+                                <button
+                                    class="flex items-center gap-1.5 px-3 py-1.5 border border-slate-200 rounded-lg text-xs font-medium text-slate-600 hover:bg-slate-50">
+                                    <span class="material-symbols-outlined !text-[16px]">sync</span> Generate
+                                </button>
+                            </div>
+                            <div class="space-y-3">
+                                <div class="p-3 bg-slate-50 rounded-lg border border-slate-100 flex gap-3">
+                                    <span
+                                        class="w-6 h-6 bg-primary text-white text-xs font-bold rounded-full flex items-center justify-center shrink-0">1</span>
+                                    <p class="text-xs text-slate-700">Tell us about your experience building backend
+                                        systems with high traffic. What were the challenges?</p>
+                                </div>
+                                <div class="p-3 bg-slate-50 rounded-lg border border-slate-100 flex gap-3">
+                                    <span
+                                        class="w-6 h-6 bg-primary text-white text-xs font-bold rounded-full flex items-center justify-center shrink-0">2</span>
+                                    <p class="text-xs text-slate-700">How do you manage distributed caching with Redis
+                                        in a Kubernetes environment?</p>
+                                </div>
+                                <div class="p-3 bg-slate-50 rounded-lg border border-slate-100 flex gap-3">
+                                    <span
+                                        class="w-6 h-6 bg-primary text-white text-xs font-bold rounded-full flex items-center justify-center shrink-0">3</span>
+                                    <p class="text-xs text-slate-700">Explain your contributions to open source. What
+                                        was your most impactful PR?</p>
+                                </div>
+                                <div class="p-3 bg-slate-50 rounded-lg border border-slate-100 flex gap-3">
+                                    <span
+                                        class="w-6 h-6 bg-primary text-white text-xs font-bold rounded-full flex items-center justify-center shrink-0">4</span>
+                                    <p class="text-xs text-slate-700">How do you ensure data consistency across
+                                        microservices?</p>
+                                </div>
+                                <div class="p-3 bg-slate-50 rounded-lg border border-slate-100 flex gap-3">
+                                    <span
+                                        class="w-6 h-6 bg-primary text-white text-xs font-bold rounded-full flex items-center justify-center shrink-0">5</span>
+                                    <p class="text-xs text-slate-700">What is your approach to performance bottleneck
+                                        identification in Go services?</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hidden p-6 space-y-6">
+                            <div class="space-y-3">
+                                <div class="flex justify-between items-center">
+                                    <h4 class="text-sm font-bold text-slate-900">Notes</h4>
+                                    <button
+                                        class="flex items-center gap-1 px-3 py-1.5 bg-primary text-white rounded-lg text-xs font-bold">
+                                        <span class="material-symbols-outlined !text-[16px]">add</span> Add
+                                    </button>
+                                </div>
+                                <textarea
+                                    class="w-full text-sm border-slate-200 rounded-xl focus:ring-primary focus:border-primary p-3 min-h-[100px]"
+                                    placeholder="Write notes..."></textarea>
+                            </div>
+                            <div class="space-y-4">
+                                <h4 class="text-sm font-bold text-slate-900">Activity History</h4>
+                                <div class="space-y-4 border-l-2 border-slate-100 ml-2 pl-6 relative">
+                                    <div class="relative">
+                                        <div
+                                            class="absolute -left-[31px] top-0 w-4 h-4 rounded-full bg-primary/20 border-2 border-primary">
+                                        </div>
+                                        <p class="text-xs font-bold text-slate-800">Recruiter A added to Shortlist</p>
+                                        <p class="text-[10px] text-slate-400">2 hours ago</p>
+                                    </div>
+                                    <div class="relative">
+                                        <div
+                                            class="absolute -left-[31px] top-0 w-4 h-4 rounded-full bg-orange-100 border-2 border-orange-400">
+                                        </div>
+                                        <p class="text-xs font-bold text-slate-800">Deep analysis completed (GPT-4o)</p>
+                                        <p class="text-[10px] text-slate-400">3 hours ago</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+
+</html>

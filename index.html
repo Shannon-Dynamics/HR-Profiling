@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html class="light" lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>ShannonAI | Login</title>
-    <link href="https://fonts.googleapis.com" rel="preconnect" />
-    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap"
-        rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShannonAI | The Future of Automated Recruitment</title>
+    <meta name="description" content="Automate your hiring process with AI-driven candidate profiling and screening.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
     <script>
         tailwind.config = {
@@ -19,107 +20,301 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: "#0D6E6E",
-                        "primary-hover": "#0a5a5a",
+                        primary: "#136A6A",
+                        "primary-hover": "#0D5A5A",
+                        "primary-light": "#E0F2F2",
                         "background-light": "#F8FAFC",
                         "background-dark": "#0F172A",
                     },
                     fontFamily: {
                         sans: ["Inter", "sans-serif"],
-                        display: ["Inter", "sans-serif"],
+                        display: ["Outfit", "sans-serif"],
                     },
-                    borderRadius: {
-                        DEFAULT: "12px",
-                    },
+                    backgroundImage: {
+                        'hero-pattern': "url('https://images.unsplash.com/photo-1557683316-973673baf926?ixlib=rb-4.0.3&auto=format&fit=crop&w=2029&q=80')",
+                    }
                 },
             },
         };
     </script>
     <style type="text/tailwindcss">
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(8px); }
-            to { opacity: 1; transform: translateY(0); }
+        @layer utilities {
+            .text-balance {
+                text-wrap: balance;
+            }
+            .glass {
+                @apply bg-white/70 backdrop-blur-md border border-white/20;
+            }
+            .dark .glass {
+                @apply bg-slate-900/70 border-slate-700/30;
+            }
+            .card-hover {
+                @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+            }
         }
-        .animate-page-in {
-            animation: fadeIn 0.5s ease-out forwards;
-        }
-        body {
-            font-family: 'Inter', sans-serif;
+        
+        /* Reveal animations */
+        .reveal {
             opacity: 0;
+            transform: translateY(20px);
+            animation: reveal 0.8s cubic-bezier(0.5, 0, 0, 1) forwards;
         }
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        .logo-icon {
-            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        .reveal-delay-1 { animation-delay: 0.1s; }
+        .reveal-delay-2 { animation-delay: 0.2s; }
+        .reveal-delay-3 { animation-delay: 0.3s; }
+        
+        @keyframes reveal {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
 
 <body
-    class="bg-[#F8FAFC] dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col items-center justify-center p-6 animate-page-in">
-    <div class="mb-10 flex flex-col items-center gap-3">
-        <span class="font-bold text-3xl tracking-tight text-primary">ShannonAI</span>
-    </div>
-    <div
-        class="w-full max-w-[460px] bg-white dark:bg-slate-900 rounded-[24px] shadow-2xl shadow-slate-200/60 dark:shadow-none border border-slate-100 dark:border-slate-800 p-12">
-        <div class="mb-10">
-            <h1 class="text-3xl font-bold text-slate-900 dark:text-white mb-2">Welcome back</h1>
-            <p class="text-slate-500 dark:text-slate-400">Please enter your details to sign in.</p>
+    class="font-sans antialiased text-slate-900 bg-background-light dark:bg-background-dark dark:text-slate-100 selection:bg-primary/20 selection:text-primary">
+
+    <!-- Navbar -->
+    <nav
+        class="fixed top-0 w-full z-50 glass border-b border-slate-200/50 dark:border-slate-800/50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div
+                        class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center text-white shadow-lg shadow-primary/20 group-hover:scale-110 transition-transform duration-300">
+                        <span class="material-symbols-outlined text-xl">auto_awesome</span>
+                    </div>
+                    <span
+                        class="font-display font-bold text-xl tracking-tight text-slate-900 dark:text-white">ShannonAI</span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#features"
+                        class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors">Features</a>
+                    <a href="#how-it-works"
+                        class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors">How
+                        it Works</a>
+                    <a href="#pricing"
+                        class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors">Pricing</a>
+
+                    <a href="login-main.html"
+                        class="inline-flex items-center justify-center px-6 py-2.5 border border-transparent text-sm font-semibold rounded-xl text-white bg-primary hover:bg-primary-hover shadow-lg shadow-primary/20 transition-all hover:shadow-xl hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
+                        Login
+                    </a>
+                </div>
+            </div>
         </div>
-        <form action="jobs-page.html" class="space-y-6">
-            <div class="space-y-2">
-                <label class="text-sm font-semibold text-slate-700 dark:text-slate-300 ml-1" for="email">Work
-                    Email</label>
-                <div class="relative">
-                    <span
-                        class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-xl">mail</span>
-                    <input
-                        class="w-full pl-12 pr-4 py-3.5 bg-slate-50 dark:bg-slate-800 border-transparent rounded-xl text-slate-900 dark:text-white focus:ring-2 focus:ring-primary/20 focus:bg-white dark:focus:bg-slate-700 transition-all placeholder:text-slate-400 border border-slate-100 dark:border-slate-700"
-                        id="email" name="email" placeholder="name@company.com" required="" type="email" />
-                </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <!-- Background Decor -->
+        <div class="absolute inset-0 -z-10 overflow-hidden">
+            <div
+                class="absolute -top-[30%] -right-[10%] w-[70%] h-[70%] rounded-full bg-primary/5 blur-[120px] dark:bg-primary/10">
             </div>
-            <div class="space-y-2">
-                <div class="flex justify-between items-center px-1">
-                    <label class="text-sm font-semibold text-slate-700 dark:text-slate-300"
-                        for="password">Password</label>
-                    <a class="text-sm font-semibold text-primary hover:text-primary-hover transition-colors"
-                        href="#">Forgot Password?</a>
-                </div>
-                <div class="relative">
-                    <span
-                        class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-xl">lock</span>
-                    <input
-                        class="w-full pl-12 pr-4 py-3.5 bg-slate-50 dark:bg-slate-800 border-transparent rounded-xl text-slate-900 dark:text-white focus:ring-2 focus:ring-primary/20 focus:bg-white dark:focus:bg-slate-700 transition-all placeholder:text-slate-400 border border-slate-100 dark:border-slate-700"
-                        id="password" name="password" placeholder="••••••••" required="" type="password" />
-                </div>
+            <div
+                class="absolute top-[20%] -left-[10%] w-[50%] h-[50%] rounded-full bg-blue-500/5 blur-[120px] dark:bg-blue-500/10">
             </div>
-            <button
-                class="w-full bg-primary hover:bg-primary-hover text-white font-bold py-4 rounded-xl shadow-lg shadow-primary/20 transition-all active:scale-[0.98] mt-2"
-                type="button" onclick="window.location.href='jobs-page.html'">
-                Login
-            </button>
-        </form>
-        <div class="mt-12 text-center">
-            <p class="text-sm text-slate-500 dark:text-slate-400">
-                Don't have an account?
-                <a class="text-primary font-bold hover:text-primary-hover transition-colors ml-1" href="#">Sign up</a>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div
+                class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/5 border border-primary/10 text-primary text-xs font-semibold uppercase tracking-wide mb-8 reveal">
+                <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                Now in Public Beta
+            </div>
+
+            <h1
+                class="text-5xl md:text-7xl font-display font-bold text-slate-900 dark:text-white mb-8 tracking-tight text-balance reveal reveal-delay-1 leading-[1.1]">
+                Recruitment, <br />
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-emerald-400">Reimagined by
+                    AI</span>
+            </h1>
+
+            <p
+                class="mt-6 max-w-2xl mx-auto text-lg md:text-xl text-slate-500 dark:text-slate-400 text-balance reveal reveal-delay-2 leading-relaxed">
+                Stop sifting through thousands of resumes manually. ShannonAI automatically profiles, ranks, and screens
+                candidates, saving your HR team 80% of their time.
             </p>
+
+            <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center reveal reveal-delay-3">
+                <a href="login-main.html"
+                    class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-base font-bold rounded-xl text-white bg-primary hover:bg-primary-hover shadow-xl shadow-primary/20 transition-all hover:-translate-y-1">
+                    Get Started Free
+                    <span class="material-symbols-outlined ml-2 text-xl">arrow_forward</span>
+                </a>
+                <a href="#demo"
+                    class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-base font-bold rounded-xl text-slate-700 bg-white border border-slate-200 hover:bg-slate-50 hover:border-slate-300 dark:bg-slate-800 dark:border-slate-700 dark:text-white dark:hover:bg-slate-700 transition-all">
+                    <span class="material-symbols-outlined mr-2 text-xl filled-icon text-primary">play_circle</span>
+                    Watch Demo
+                </a>
+            </div>
+
+            <!-- Stats/Social Proof -->
+            <div class="mt-20 pt-10 border-t border-slate-200/60 dark:border-slate-800/60 reveal reveal-delay-3">
+                <p class="text-sm font-medium text-slate-400 uppercase tracking-widest mb-8">Trusted by forward-thinking
+                    teams</p>
+                <div
+                    class="flex flex-wrap justify-center gap-x-12 gap-y-8 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+                    <!-- Simple Logo Placeholders using Text for Demo -->
+                    <span class="text-xl font-bold font-display text-slate-600 dark:text-slate-400">Acme Corp</span>
+                    <span class="text-xl font-bold font-display text-slate-600 dark:text-slate-400">Starlight</span>
+                    <span class="text-xl font-bold font-display text-slate-600 dark:text-slate-400">Umbrella Inc.</span>
+                    <span class="text-xl font-bold font-display text-slate-600 dark:text-slate-400">Globex</span>
+                    <span class="text-xl font-bold font-display text-slate-600 dark:text-slate-400">Initech</span>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="mt-12 flex items-center gap-6">
-        <button
-            class="p-2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors flex items-center gap-2 text-sm font-medium"
-            onclick="document.documentElement.classList.toggle('dark')">
-            <span class="material-symbols-outlined text-xl">dark_mode</span>
-            Appearance
-        </button>
-        <div class="w-px h-4 bg-slate-300 dark:bg-slate-700"></div>
-        <a class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 text-sm font-medium transition-colors"
-            href="#">Privacy Policy</a>
-        <a class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 text-sm font-medium transition-colors"
-            href="#">Support</a>
-    </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-24 bg-slate-50/50 dark:bg-slate-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-display font-bold text-slate-900 dark:text-white mb-4">Everything
+                    needed to hire smarter</h2>
+                <p class="text-lg text-slate-500 dark:text-slate-400">Our AI engine handles the heavy lifting, so you
+                    can focus on building relationships with the best talent.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div
+                    class="bg-white dark:bg-slate-800 p-8 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm card-hover">
+                    <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6 text-primary">
+                        <span class="material-symbols-outlined text-3xl">psychology</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Automated Profiling</h3>
+                    <p class="text-slate-500 dark:text-slate-400 leading-relaxed">Instantly analyze thousands of CVs.
+                        Our AI extracts skills, experience, and soft skills to build comprehensive candidate profiles in
+                        seconds.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div
+                    class="bg-white dark:bg-slate-800 p-8 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm card-hover">
+                    <div
+                        class="w-14 h-14 bg-blue-500/10 rounded-xl flex items-center justify-center mb-6 text-blue-500">
+                        <span class="material-symbols-outlined text-3xl">filter_list</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Smart Shortlisting</h3>
+                    <p class="text-slate-500 dark:text-slate-400 leading-relaxed">Define your "must-haves" and let the
+                        system filter candidates automatically. Only see the people who actually match your
+                        requirements.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div
+                    class="bg-white dark:bg-slate-800 p-8 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm card-hover">
+                    <div
+                        class="w-14 h-14 bg-emerald-500/10 rounded-xl flex items-center justify-center mb-6 text-emerald-500">
+                        <span class="material-symbols-outlined text-3xl">insights</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Data-Driven Insights</h3>
+                    <p class="text-slate-500 dark:text-slate-400 leading-relaxed">Make decisions based on data, not gut
+                        feeling. Compare candidates side-by-side with objective scoring and detailed match reports.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 relative overflow-hidden">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div
+                class="bg-primary rounded-[2.5rem] p-12 md:p-20 text-center shadow-2xl shadow-primary/30 relative overflow-hidden">
+                <!-- Abstract patterns -->
+                <div class="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 bg-white/10 rounded-full blur-3xl"></div>
+                <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-black/10 rounded-full blur-3xl"></div>
+
+                <h2 class="text-3xl md:text-5xl font-display font-bold text-white mb-6 balanced">Ready to transform your
+                    hiring process?</h2>
+                <p class="text-primary-light text-lg mb-10 max-w-2xl mx-auto">Join 500+ companies using ShannonAI to
+                    hire top talent 3x faster.</p>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="login-main.html"
+                        class="inline-flex items-center justify-center px-8 py-4 text-base font-bold rounded-xl text-primary bg-white hover:bg-slate-50 shadow-lg transition-all hover:-translate-y-1">
+                        Get Started Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-12">
+                <div class="col-span-2 lg:col-span-2">
+                    <a href="#" class="flex items-center gap-2 mb-4">
+                        <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-white">
+                            <span class="material-symbols-outlined text-lg">auto_awesome</span>
+                        </div>
+                        <span class="font-display font-bold text-xl text-slate-900 dark:text-white">ShannonAI</span>
+                    </a>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm max-w-xs leading-relaxed">
+                        Helping companies build better teams through intelligent, unbiased, and efficient automated
+                        recruitment.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-slate-900 dark:text-white mb-4">Product</h4>
+                    <ul class="space-y-3 text-sm text-slate-500 dark:text-slate-400">
+                        <li><a href="#" class="hover:text-primary transition-colors">Features</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Pricing</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Integrations</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Changelog</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-slate-900 dark:text-white mb-4">Company</h4>
+                    <ul class="space-y-3 text-sm text-slate-500 dark:text-slate-400">
+                        <li><a href="#" class="hover:text-primary transition-colors">About</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Careers</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Blog</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-slate-900 dark:text-white mb-4">Legal</h4>
+                    <ul class="space-y-3 text-sm text-slate-500 dark:text-slate-400">
+                        <li><a href="#" class="hover:text-primary transition-colors">Privacy</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Terms</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Security</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div
+                class="pt-8 border-t border-slate-100 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-slate-400 text-sm">© 2026 Shannon Dynamics. All rights reserved.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="text-slate-400 hover:text-primary transition-colors">
+                        <span class="sr-only">Twitter</span>
+                        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+                        </svg>
+                    </a>
+                    <a href="#" class="text-slate-400 hover:text-primary transition-colors">
+                        <span class="sr-only">LinkedIn</span>
+                        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 </body>
 
